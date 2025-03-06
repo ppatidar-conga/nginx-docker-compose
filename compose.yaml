@@ -6,6 +6,12 @@ services:
       target: dev
     volumes:
       - ./api/index.js:/src/index.js
+  nodebroaker:
+    build:
+      context: ./api2
+      target: dev
+    volumes:
+      - ./api2/index.js:/src/index.js      
   nginx:
     restart: always
     image: nginx:1-alpine
